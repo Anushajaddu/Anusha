@@ -1,3 +1,5 @@
+import bee from '../bee.png';
+
 export default function BEES({ id, name, health, setBees }) {
   const beeHealthHandler = (event) => {
     const value = event.target.value;
@@ -5,7 +7,7 @@ export default function BEES({ id, name, health, setBees }) {
 
     if (value === "" || key !== "Enter") return;
 
-    if (value && Number(value) > 100) alert("Enter value 0-100");
+    if (value && Number(value) > 100) alert("Enter value 1-100");
     else if (value && Number(value) > health)
       alert("Enter value less than Bee Health");
     else if (value && Number(value)) {
@@ -22,6 +24,8 @@ export default function BEES({ id, name, health, setBees }) {
 
   return (
     <section className={`bee-card ${health === 0 ? "disabled" : ""}`}>
+      
+      <img src={bee} width={35} height={35} />
       <p>
         {name} is {health > 0 ? "Alive" : "Dead"}
       </p>
@@ -36,8 +40,7 @@ export default function BEES({ id, name, health, setBees }) {
           type="number"
           min="0"
           max="100"
-          onKeyPress={beeHealthHandler}
-          //I think onBlur would be a better option here
+          onKeyPress={beeHealthHandler} //onBlur
           disabled={health === 0}
         />
       </div>

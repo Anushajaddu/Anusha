@@ -1,0 +1,47 @@
+.App {
+  margin-top: 2 0px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.bee-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+  background-color: gold;
+  border-radius: 5px;
+  border: solid 1px black;
+  margin: 5px auto;
+}
+
+.bee-card p {
+  width: 150px;
+}
+
+.disabled {
+  background-color: grey;
+  pointer-events: none;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group label {
+  width: 150px;
+}
+
+.input-group input {
+  width: 30%;
+  height: 18px;
+  border-radius: 5px;
+  border: 1px black solid;
+}
+
+.progress-group {
+  display: flex;
+  gap: 5px;
+}
